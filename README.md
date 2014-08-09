@@ -8,6 +8,8 @@ Introduction
 --------
 This control can be seen as an extension of Apple's UITabBarController. Though it is not a subclass, it has the same behaviour as a normal UITabBarController for tabs with a single subitem. You can, however, chose to add more subitems to one single tab which will make the tabbar animate upwards revealing all the subitems added to the tab.
 
+![AHTabBarController](https://raw.githubusercontent.com/ArthurDevNL/AHTabBarController/master/AHTabBarController.gif)
+
 
 Usage
 --------
