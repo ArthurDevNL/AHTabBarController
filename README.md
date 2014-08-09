@@ -6,6 +6,6 @@ AHTabBarController
 
 License
 --------
-_BFPaperCheckbox_ uses the MIT License:
+AHTabBarController uses the MIT License:
 
 > Please see included [LICENSE file](https://raw.githubusercontent.com/ArthurDevNL/AHTabBarController/master/LICENSE.md).
