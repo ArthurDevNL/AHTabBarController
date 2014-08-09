@@ -1,0 +1,515 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8ECEA94419966F5C006FB7AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECEA94319966F5C006FB7AA /* Foundation.framework */; };
+		8ECEA94619966F5C006FB7AA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECEA94519966F5C006FB7AA /* CoreGraphics.framework */; };
+		8ECEA94819966F5C006FB7AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECEA94719966F5C006FB7AA /* UIKit.framework */; };
+		8ECEA94E19966F5C006FB7AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8ECEA94C19966F5C006FB7AA /* InfoPlist.strings */; };
+		8ECEA95019966F5C006FB7AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECEA94F19966F5C006FB7AA /* main.m */; };
+		8ECEA95419966F5C006FB7AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECEA95319966F5C006FB7AA /* AppDelegate.m */; };
+		8ECEA95719966F5C006FB7AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ECEA95519966F5C006FB7AA /* Main.storyboard */; };
+		8ECEA95A19966F5C006FB7AA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECEA95919966F5C006FB7AA /* ViewController.m */; };
+		8ECEA95C19966F5C006FB7AA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ECEA95B19966F5C006FB7AA /* Images.xcassets */; };
+		8ECEA96319966F5C006FB7AA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECEA96219966F5C006FB7AA /* XCTest.framework */; };
+		8ECEA96419966F5C006FB7AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECEA94319966F5C006FB7AA /* Foundation.framework */; };
+		8ECEA96519966F5C006FB7AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECEA94719966F5C006FB7AA /* UIKit.framework */; };
+		8ECEA96D19966F5C006FB7AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8ECEA96B19966F5C006FB7AA /* InfoPlist.strings */; };
+		8ECEA96F19966F5C006FB7AA /* AHTabBarControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECEA96E19966F5C006FB7AA /* AHTabBarControllerTests.m */; };
+		8ECEA97F19966FA6006FB7AA /* AHSubitemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECEA97A19966FA6006FB7AA /* AHSubitemView.m */; };
+		8ECEA98019966FA6006FB7AA /* AHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECEA97C19966FA6006FB7AA /* AHTabBarController.m */; };
+		8ECEA98119966FA6006FB7AA /* AHTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECEA97E19966FA6006FB7AA /* AHTabView.m */; };
+		8EE79C94199671310049F3F3 /* UIImage+Overlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE79C93199671310049F3F3 /* UIImage+Overlay.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8ECEA96619966F5C006FB7AA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8ECEA93819966F5C006FB7AA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8ECEA93F19966F5C006FB7AA;
+			remoteInfo = AHTabBarController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8ECEA94019966F5C006FB7AA /* AHTabBarController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AHTabBarController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ECEA94319966F5C006FB7AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8ECEA94519966F5C006FB7AA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		8ECEA94719966F5C006FB7AA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		8ECEA94B19966F5C006FB7AA /* AHTabBarController-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AHTabBarController-Info.plist"; sourceTree = "<group>"; };
+		8ECEA94D19966F5C006FB7AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8ECEA94F19966F5C006FB7AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8ECEA95119966F5C006FB7AA /* AHTabBarController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AHTabBarController-Prefix.pch"; sourceTree = "<group>"; };
+		8ECEA95219966F5C006FB7AA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8ECEA95319966F5C006FB7AA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8ECEA95619966F5C006FB7AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8ECEA95819966F5C006FB7AA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8ECEA95919966F5C006FB7AA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8ECEA95B19966F5C006FB7AA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8ECEA96119966F5C006FB7AA /* AHTabBarControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AHTabBarControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8ECEA96219966F5C006FB7AA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		8ECEA96A19966F5C006FB7AA /* AHTabBarControllerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AHTabBarControllerTests-Info.plist"; sourceTree = "<group>"; };
+		8ECEA96C19966F5C006FB7AA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8ECEA96E19966F5C006FB7AA /* AHTabBarControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AHTabBarControllerTests.m; sourceTree = "<group>"; };
+		8ECEA97919966FA6006FB7AA /* AHSubitemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHSubitemView.h; path = AHTabBarController/AHSubitemView.h; sourceTree = "<group>"; };
+		8ECEA97A19966FA6006FB7AA /* AHSubitemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHSubitemView.m; path = AHTabBarController/AHSubitemView.m; sourceTree = "<group>"; };
+		8ECEA97B19966FA6006FB7AA /* AHTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHTabBarController.h; path = AHTabBarController/AHTabBarController.h; sourceTree = "<group>"; };
+		8ECEA97C19966FA6006FB7AA /* AHTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHTabBarController.m; path = AHTabBarController/AHTabBarController.m; sourceTree = "<group>"; };
+		8ECEA97D19966FA6006FB7AA /* AHTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AHTabView.h; path = AHTabBarController/AHTabView.h; sourceTree = "<group>"; };
+		8ECEA97E19966FA6006FB7AA /* AHTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHTabView.m; path = AHTabBarController/AHTabView.m; sourceTree = "<group>"; };
+		8EE79C92199671310049F3F3 /* UIImage+Overlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Overlay.h"; path = "AHTabBarController/Category/UIImage+Overlay.h"; sourceTree = "<group>"; };
+		8EE79C93199671310049F3F3 /* UIImage+Overlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Overlay.m"; path = "AHTabBarController/Category/UIImage+Overlay.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8ECEA93D19966F5C006FB7AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8ECEA94619966F5C006FB7AA /* CoreGraphics.framework in Frameworks */,
+				8ECEA94819966F5C006FB7AA /* UIKit.framework in Frameworks */,
+				8ECEA94419966F5C006FB7AA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8ECEA95E19966F5C006FB7AA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8ECEA96319966F5C006FB7AA /* XCTest.framework in Frameworks */,
+				8ECEA96519966F5C006FB7AA /* UIKit.framework in Frameworks */,
+				8ECEA96419966F5C006FB7AA /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8ECEA93719966F5C006FB7AA = {
+			isa = PBXGroup;
+			children = (
+				8ECEA94919966F5C006FB7AA /* AHTabBarController */,
+				8ECEA96819966F5C006FB7AA /* AHTabBarControllerTests */,
+				8ECEA94219966F5C006FB7AA /* Frameworks */,
+				8ECEA94119966F5C006FB7AA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8ECEA94119966F5C006FB7AA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8ECEA94019966F5C006FB7AA /* AHTabBarController.app */,
+				8ECEA96119966F5C006FB7AA /* AHTabBarControllerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8ECEA94219966F5C006FB7AA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8ECEA94319966F5C006FB7AA /* Foundation.framework */,
+				8ECEA94519966F5C006FB7AA /* CoreGraphics.framework */,
+				8ECEA94719966F5C006FB7AA /* UIKit.framework */,
+				8ECEA96219966F5C006FB7AA /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8ECEA94919966F5C006FB7AA /* AHTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				8ECEA97819966F7E006FB7AA /* AHTabBarController */,
+				8ECEA95219966F5C006FB7AA /* AppDelegate.h */,
+				8ECEA95319966F5C006FB7AA /* AppDelegate.m */,
+				8ECEA95519966F5C006FB7AA /* Main.storyboard */,
+				8ECEA95819966F5C006FB7AA /* ViewController.h */,
+				8ECEA95919966F5C006FB7AA /* ViewController.m */,
+				8ECEA95B19966F5C006FB7AA /* Images.xcassets */,
+				8ECEA94A19966F5C006FB7AA /* Supporting Files */,
+			);
+			path = AHTabBarController;
+			sourceTree = "<group>";
+		};
+		8ECEA94A19966F5C006FB7AA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8ECEA94B19966F5C006FB7AA /* AHTabBarController-Info.plist */,
+				8ECEA94C19966F5C006FB7AA /* InfoPlist.strings */,
+				8ECEA94F19966F5C006FB7AA /* main.m */,
+				8ECEA95119966F5C006FB7AA /* AHTabBarController-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8ECEA96819966F5C006FB7AA /* AHTabBarControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				8ECEA96E19966F5C006FB7AA /* AHTabBarControllerTests.m */,
+				8ECEA96919966F5C006FB7AA /* Supporting Files */,
+			);
+			path = AHTabBarControllerTests;
+			sourceTree = "<group>";
+		};
+		8ECEA96919966F5C006FB7AA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8ECEA96A19966F5C006FB7AA /* AHTabBarControllerTests-Info.plist */,
+				8ECEA96B19966F5C006FB7AA /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8ECEA97819966F7E006FB7AA /* AHTabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				8EE79C911996711C0049F3F3 /* Category */,
+				8ECEA97B19966FA6006FB7AA /* AHTabBarController.h */,
+				8ECEA97C19966FA6006FB7AA /* AHTabBarController.m */,
+				8ECEA97D19966FA6006FB7AA /* AHTabView.h */,
+				8ECEA97E19966FA6006FB7AA /* AHTabView.m */,
+				8ECEA97919966FA6006FB7AA /* AHSubitemView.h */,
+				8ECEA97A19966FA6006FB7AA /* AHSubitemView.m */,
+			);
+			name = AHTabBarController;
+			sourceTree = "<group>";
+		};
+		8EE79C911996711C0049F3F3 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				8EE79C92199671310049F3F3 /* UIImage+Overlay.h */,
+				8EE79C93199671310049F3F3 /* UIImage+Overlay.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8ECEA93F19966F5C006FB7AA /* AHTabBarController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8ECEA97219966F5C006FB7AA /* Build configuration list for PBXNativeTarget "AHTabBarController" */;
+			buildPhases = (
+				8ECEA93C19966F5C006FB7AA /* Sources */,
+				8ECEA93D19966F5C006FB7AA /* Frameworks */,
+				8ECEA93E19966F5C006FB7AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AHTabBarController;
+			productName = AHTabBarController;
+			productReference = 8ECEA94019966F5C006FB7AA /* AHTabBarController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8ECEA96019966F5C006FB7AA /* AHTabBarControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8ECEA97519966F5C006FB7AA /* Build configuration list for PBXNativeTarget "AHTabBarControllerTests" */;
+			buildPhases = (
+				8ECEA95D19966F5C006FB7AA /* Sources */,
+				8ECEA95E19966F5C006FB7AA /* Frameworks */,
+				8ECEA95F19966F5C006FB7AA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8ECEA96719966F5C006FB7AA /* PBXTargetDependency */,
+			);
+			name = AHTabBarControllerTests;
+			productName = AHTabBarControllerTests;
+			productReference = 8ECEA96119966F5C006FB7AA /* AHTabBarControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8ECEA93819966F5C006FB7AA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Arthur Hemmer";
+				TargetAttributes = {
+					8ECEA96019966F5C006FB7AA = {
+						TestTargetID = 8ECEA93F19966F5C006FB7AA;
+					};
+				};
+			};
+			buildConfigurationList = 8ECEA93B19966F5C006FB7AA /* Build configuration list for PBXProject "AHTabBarController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8ECEA93719966F5C006FB7AA;
+			productRefGroup = 8ECEA94119966F5C006FB7AA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8ECEA93F19966F5C006FB7AA /* AHTabBarController */,
+				8ECEA96019966F5C006FB7AA /* AHTabBarControllerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8ECEA93E19966F5C006FB7AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8ECEA95C19966F5C006FB7AA /* Images.xcassets in Resources */,
+				8ECEA94E19966F5C006FB7AA /* InfoPlist.strings in Resources */,
+				8ECEA95719966F5C006FB7AA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8ECEA95F19966F5C006FB7AA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8ECEA96D19966F5C006FB7AA /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8ECEA93C19966F5C006FB7AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8ECEA97F19966FA6006FB7AA /* AHSubitemView.m in Sources */,
+				8ECEA95A19966F5C006FB7AA /* ViewController.m in Sources */,
+				8ECEA98019966FA6006FB7AA /* AHTabBarController.m in Sources */,
+				8ECEA95419966F5C006FB7AA /* AppDelegate.m in Sources */,
+				8EE79C94199671310049F3F3 /* UIImage+Overlay.m in Sources */,
+				8ECEA98119966FA6006FB7AA /* AHTabView.m in Sources */,
+				8ECEA95019966F5C006FB7AA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8ECEA95D19966F5C006FB7AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8ECEA96F19966F5C006FB7AA /* AHTabBarControllerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8ECEA96719966F5C006FB7AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8ECEA93F19966F5C006FB7AA /* AHTabBarController */;
+			targetProxy = 8ECEA96619966F5C006FB7AA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8ECEA94C19966F5C006FB7AA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8ECEA94D19966F5C006FB7AA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8ECEA95519966F5C006FB7AA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8ECEA95619966F5C006FB7AA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8ECEA96B19966F5C006FB7AA /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8ECEA96C19966F5C006FB7AA /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8ECEA97019966F5C006FB7AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8ECEA97119966F5C006FB7AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8ECEA97319966F5C006FB7AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AHTabBarController/AHTabBarController-Prefix.pch";
+				INFOPLIST_FILE = "AHTabBarController/AHTabBarController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8ECEA97419966F5C006FB7AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AHTabBarController/AHTabBarController-Prefix.pch";
+				INFOPLIST_FILE = "AHTabBarController/AHTabBarController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8ECEA97619966F5C006FB7AA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AHTabBarController.app/AHTabBarController";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AHTabBarController/AHTabBarController-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AHTabBarControllerTests/AHTabBarControllerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		8ECEA97719966F5C006FB7AA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AHTabBarController.app/AHTabBarController";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AHTabBarController/AHTabBarController-Prefix.pch";
+				INFOPLIST_FILE = "AHTabBarControllerTests/AHTabBarControllerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8ECEA93B19966F5C006FB7AA /* Build configuration list for PBXProject "AHTabBarController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8ECEA97019966F5C006FB7AA /* Debug */,
+				8ECEA97119966F5C006FB7AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8ECEA97219966F5C006FB7AA /* Build configuration list for PBXNativeTarget "AHTabBarController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8ECEA97319966F5C006FB7AA /* Debug */,
+				8ECEA97419966F5C006FB7AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8ECEA97519966F5C006FB7AA /* Build configuration list for PBXNativeTarget "AHTabBarControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8ECEA97619966F5C006FB7AA /* Debug */,
+				8ECEA97719966F5C006FB7AA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8ECEA93819966F5C006FB7AA /* Project object */;
+}
