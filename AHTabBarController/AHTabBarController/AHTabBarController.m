@@ -349,6 +349,17 @@
     return _subitemHeight;
 }
 
+-(UIColor *)selectedColor
+{
+    if (!_selectedColor) {
+        _selectedColor = [UIColor colorWithRed:211.f/255.f
+                                         green:84.f/255.f
+                                          blue:0.f/255.f
+                                         alpha:1.f];
+    }
+    return _selectedColor;
+}
+
 -(UIView *)darkenView
 {
     if (!_darkenView) {

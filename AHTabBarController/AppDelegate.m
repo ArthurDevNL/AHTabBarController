@@ -16,11 +16,6 @@
 {
     AHTabBarController *tabBarController = (AHTabBarController*)self.window.rootViewController;
     
-    tabBarController.selectedColor = [UIColor colorWithRed:211.f/255.f
-                                                     green:84.f/255.f
-                                                      blue:0.f/255.f
-                                                     alpha:1.f];
-    
     /******* PURUS *******/
     AHTabView *purus = [AHTabView new];
     [purus setImage:[UIImage imageNamed:@"persondot"]];
