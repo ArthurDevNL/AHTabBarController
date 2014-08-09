@@ -8,4 +8,4 @@ License
 --------
 AHTabBarController uses the MIT License:
 
-> Please see included [LICENSE file](https://raw.githubusercontent.com/ArthurDevNL/AHTabBarController/master/LICENSE.md).
+> Please see included [LICENSE file](https://github.com/ArthurDevNL/AHTabBarController/blob/master/LICENSE).
