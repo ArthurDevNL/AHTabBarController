@@ -52,6 +52,14 @@ Though the amount of customizations on this control are pretty limited there are
  * Setting the subitem height: _subitemHeight_.
  * If you don't want the tab bar to animate you can set _shouldTabBarAnimate_ to NO.
 
+CocoaPods
+--------
+You can easily add this control to your project by adding it to your Podfile.
+
+```ruby
+platform :ios, '7.0'
+pod "AHTabBarController"
+```
 
 Todo
 --------
