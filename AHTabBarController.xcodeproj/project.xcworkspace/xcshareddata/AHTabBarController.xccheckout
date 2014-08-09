@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C3F2A737-25F9-43F5-9D3C-3127A887FCFB</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AHTabBarController</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>60C89576-8231-4917-829C-A6798B1F7D7B</key>
+		<string>https://github.com/ArthurDevNL/AHTabBarController.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>AHTabBarController.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>60C89576-8231-4917-829C-A6798B1F7D7B</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ArthurDevNL/AHTabBarController.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>60C89576-8231-4917-829C-A6798B1F7D7B</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>60C89576-8231-4917-829C-A6798B1F7D7B</string>
+			<key>IDESourceControlWCCName</key>
+			<string>AHTabBarController</string>
+		</dict>
+	</array>
+</dict>
+</plist>

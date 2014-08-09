@@ -154,6 +154,9 @@
 
 -(void)reloadViewForItem:(AHSubitemView *)subitem
 {
+    if (!subitem)
+        return;
+    
     //Removing the old view(controller)
     UIViewController *oldController = [self viewControllerForSubitem:self.currentItem];
     if (oldController && ![oldController isEqual:[NSNull null]]) {
@@ -164,8 +167,15 @@
     
     //Getting the new viewcontroller or create it if we don't have it in memory yet
     UIViewController *viewController = [self viewControllerForSubitem:subitem];
-    if ([viewController isEqual:[NSNull null]]) {
+    if ([viewController isEqual:[NSNull null]] || !viewController) {
         viewController = [self.storyboard instantiateViewControllerWithIdentifier:subitem.viewControllerIdentifier];
+        
+        if (!viewController) {
+            [[NSException exceptionWithName:@"Invalid ViewController!"
+                                     reason:@"The ViewController instantiated form the storyboard may not be nil. Please check if the identifier is valid"
+                                   userInfo:nil] raise];
+        }
+        
         [self setViewController:viewController forSubitem:subitem];
     }
     
