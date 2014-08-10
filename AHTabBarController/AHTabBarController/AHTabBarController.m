@@ -247,6 +247,7 @@
 -(void)tapGestureRecognized:(UITapGestureRecognizer*)gestureRecognizer
 {
     if (gestureRecognizer.state == UIGestureRecognizerStateRecognized) {
+        [self setSelectedTab:self.currentItem.tab];
         [self hideSubmenu];
     }
 }
