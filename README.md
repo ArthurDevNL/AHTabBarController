@@ -65,8 +65,6 @@ Todo
 --------
 
  * Instead of setting the StoryboardID of a viewcontroller add the possibility to add the viewcontroller directly to the tab.
- * Add support for landscape orientations.
- * Handle interface rotations.
  * If the number of subitem exceeds the number of items that can be viewed on screen it won't do anything yet. Would be great if it would scroll though I don't recommend you add that many items to your tabs.
  * More customization features
 
