@@ -50,6 +50,7 @@ Though the amount of customizations on this control are pretty limited there are
 
  * Setting the highlighted tintColor of the tabs and subitems: _selectedColor_.
  * Setting the subitem height: _subitemHeight_.
+ * Setting the tab bar height: _tabBarHeight_.
  * If you don't want the tab bar to animate you can set _shouldTabBarAnimate_ to NO.
 
 CocoaPods
