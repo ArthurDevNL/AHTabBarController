@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7AC990A11A18A45D004FB7FC /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7AC990A01A18A45D004FB7FC /* Launch Screen.xib */; };
 		8ECEA94419966F5C006FB7AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECEA94319966F5C006FB7AA /* Foundation.framework */; };
 		8ECEA94619966F5C006FB7AA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECEA94519966F5C006FB7AA /* CoreGraphics.framework */; };
 		8ECEA94819966F5C006FB7AA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECEA94719966F5C006FB7AA /* UIKit.framework */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7AC990A01A18A45D004FB7FC /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = "Launch Screen.xib"; path = "../Launch Screen.xib"; sourceTree = "<group>"; };
 		8ECEA94019966F5C006FB7AA /* AHTabBarController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AHTabBarController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ECEA94319966F5C006FB7AA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		8ECEA94519966F5C006FB7AA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -139,6 +141,7 @@
 		8ECEA94A19966F5C006FB7AA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				7AC990A01A18A45D004FB7FC /* Launch Screen.xib */,
 				8ECEA94B19966F5C006FB7AA /* AHTabBarController-Info.plist */,
 				8ECEA94C19966F5C006FB7AA /* InfoPlist.strings */,
 				8ECEA94F19966F5C006FB7AA /* main.m */,
@@ -265,6 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8ECEA95C19966F5C006FB7AA /* Images.xcassets in Resources */,
+				7AC990A11A18A45D004FB7FC /* Launch Screen.xib in Resources */,
 				8ECEA94E19966F5C006FB7AA /* InfoPlist.strings in Resources */,
 				8ECEA95719966F5C006FB7AA /* Main.storyboard in Resources */,
 			);
@@ -415,12 +419,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AHTabBarController/AHTabBarController-Prefix.pch";
 				INFOPLIST_FILE = "AHTabBarController/AHTabBarController-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -429,12 +433,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AHTabBarController/AHTabBarController-Prefix.pch";
 				INFOPLIST_FILE = "AHTabBarController/AHTabBarController-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

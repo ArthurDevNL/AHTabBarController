@@ -75,7 +75,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [self setupMenu];
-    
     return YES;
 }
 							

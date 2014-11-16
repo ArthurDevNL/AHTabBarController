@@ -24,12 +24,17 @@
 //The label that displays the tab's title
 @property (nonatomic) UILabel *titleLabel;
 
+//Indicates whether the tab is currently selected or not
+@property (nonatomic, getter=isSelected) BOOL selected;
+
 @end
 
 @implementation AHTabView
 
 -(void)setSelected:(BOOL)selected
 {
+    _selected = selected;
+    
     if (selected) {
         [self.titleLabel setTextColor:self.selectedColor];
         [self.titleLabel setFont:[UIFont boldSystemFontOfSize:9.f]];
@@ -52,19 +57,22 @@
 {
     [super layoutSubviews];
     
+    //Some constants
     CGRect frame = self.frame;
     static const float kHorizontalSpacing = 5.f;
     static const float kVerticalSpacing = 1.f;
     static const float kLabelHeight = 13.f;
     
-    UIColor *tintColor = [UIColor colorWithWhite:.6f alpha:1.f];
+    UIColor *tintColor = self.isSelected ? self.selectedColor : [UIColor colorWithWhite:.6f alpha:1.f];
     
+    //Create and setup the thumbnail imageview if it doesn't exist yet
     if (!self.thumbnail) {
         self.thumbnail = [[UIImageView alloc] initWithFrame:CGRectZero];
         [self.thumbnail setContentMode:UIViewContentModeScaleAspectFit];
         [self addSubview:self.thumbnail];
     }
     
+    //Set the thumbnail's frame and set the image
     CGRect tFrame = CGRectZero;
     tFrame.size.width = frame.size.width - 2*kHorizontalSpacing;
     tFrame.size.height = frame.size.height - (3*kVerticalSpacing + kLabelHeight) - 11.f;
@@ -73,6 +81,7 @@
     [self.thumbnail setFrame:tFrame];
     [self.thumbnail setImage:[self.image imageWithColor:tintColor]];
     
+    //Create and setup the titlelabel if it doesn't exist yet
     if (!self.titleLabel) {
         self.titleLabel = [UILabel new];
         [self.titleLabel setFont:[UIFont systemFontOfSize:9.f]];
@@ -82,6 +91,7 @@
         [self addSubview:self.titleLabel];
     }
     
+    //Set the titlelabel's frame and text
     CGRect lFrame = CGRectZero;
     lFrame.size.width = frame.size.width - 2*kHorizontalSpacing;
     lFrame.size.height = kLabelHeight;

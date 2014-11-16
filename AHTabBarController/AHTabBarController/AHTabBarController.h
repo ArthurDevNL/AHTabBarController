@@ -13,24 +13,39 @@
 
 @interface AHTabBarController : UIViewController
 
-//The bottom bar in which the FancyTab items are displayed.
-@property (nonatomic) UIView *tabBar;
+/**
+ The view for the tab bar at the bottom of the screen.
+ */
+@property (nonatomic, readonly) UIView *tabBar;
 
-//The view that contains the viewController for the selected FancyItem.
-@property (nonatomic) UIView *containerView;
+/**
+ The view that shows the viewcontroller for the selected item.
+ */
+@property (nonatomic, readonly) UIView *containerView;
 
-//This array contains FancyTab instances which in turn contain FancyItem instances. The menu visible
-// to the user will be constructed according to the items in this array.
+/**
+ This array contains AHTabView instances. Each AHTabView instance can contain multiple AHSubitemViews which will be revealed when the users taps on a tab.
+ */
 @property (nonatomic, readonly) NSMutableArray *tabs;
 
-//The color that will indicate the selected state of tabs and submenu items
+/**
+ The color that indicates the selected state of tabs and submenu items.
+ */
 @property (nonatomic) UIColor *selectedColor;
 
-//The height for the cells that are presented when the menu is raised. Defaults to 50.f
+/**
+ The height for the cells that are presented when the menu is raised. Defaults to 50.
+ */
 @property (nonatomic) NSNumber *subitemHeight;
 
-//A boolean indicating whether the tabbar should move with the submenu or that the
-// submenu should appear above the tabbar.
+/**
+ The height of the tab bar. Defaults to 49.
+*/
+@property (nonatomic) NSNumber *tabBarHeight;
+
+/**
+ A boolean indicating whether the tabbar should move with the submenu or that the submenu should appear above the tabbar.
+ */
 @property (nonatomic) BOOL shouldTabBarAnimate;
 
 @end

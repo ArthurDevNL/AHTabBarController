@@ -1,9 +1,9 @@
 Pod::Spec.new do |s|
   s.name         = 'AHTabBarController'
-  s.version      = '1.0'
+  s.version      = '1.0.2'
   s.homepage     = 'https://github.com/ArthurDevNL/AHTabBarController'
   s.authors      =  { 'Arthur Hemmer' => 'arthurhemmer@hotmail.com' }
-  s.summary      = 'A traditional UITabBarController with possibilities of adding multiple items behind every tab.'
+  s.summary      = 'A traditional UITabBarController with the possibility of adding multiple items behind every tab.'
     s.license      =  {
         :type => 'MIT',
         :file => 'LICENSE'
@@ -19,7 +19,6 @@ Pod::Spec.new do |s|
   s.framework    =  'QuartzCore'
 
   s.requires_arc = true
-  
 # Pod Dependencies
 
 end

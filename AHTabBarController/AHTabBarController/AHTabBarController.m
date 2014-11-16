@@ -35,9 +35,14 @@
 //The tab for which the menu is currently displayed
 @property (nonatomic) AHTabView *selectedTab;
 
+//The separator line at the top of the tab bar
+@property (nonatomic) UIView *separator;
+
 @end
 
 @implementation AHTabBarController
+@synthesize containerView = _containerView;
+@synthesize tabBar = _tabBar;
 
 -(void)reloadSubmenuItemsForTab:(AHTabView*)tabView animated:(BOOL)animated
 {
@@ -79,11 +84,12 @@
         return;
     
     [self setSubmenuAnimating:YES];
+    [self.submenu setHidden:NO];
     
     if (!self.submenu) {
         self.submenu = [[UIView alloc] initWithFrame:CGRectMake(0,
-                                                                self.view.frame.size.height,
-                                                                self.view.frame.size.width,
+                                                                self.view.bounds.size.height,
+                                                                self.view.bounds.size.width,
                                                                 0)];
         [self.submenu setBackgroundColor:[UIColor colorWithWhite:.6f alpha:1.f]];
         [self.view insertSubview:self.submenu belowSubview:self.tabBar];
@@ -95,10 +101,10 @@
     
     CGRect barFrame = self.tabBar.frame;
     if (self.shouldTabBarAnimate) {
-        barFrame.origin.y = self.view.frame.size.height - (tabView.subitems.count*self.subitemHeight.floatValue + barFrame.size.height);
-        submenuFrame.origin.y = self.view.frame.size.height - submenuFrame.size.height;
+        barFrame.origin.y = self.view.bounds.size.height - (tabView.subitems.count*self.subitemHeight.floatValue + barFrame.size.height);
+        submenuFrame.origin.y = self.view.bounds.size.height - submenuFrame.size.height;
     } else {
-        submenuFrame.origin.y = self.view.frame.size.height - (submenuFrame.size.height + self.tabBar.frame.size.height);
+        submenuFrame.origin.y = self.view.bounds.size.height - (submenuFrame.size.height + self.tabBar.frame.size.height);
     }
     
     [self reloadSubmenuItemsForTab:tabView animated:!self.isSubmenuVisible];
@@ -129,10 +135,10 @@
     CGRect submenuFrame = self.submenu.frame;
     CGRect barFrame = self.tabBar.frame;
     if (self.shouldTabBarAnimate) {
-        barFrame.origin.y = self.view.frame.size.height - barFrame.size.height;
-        submenuFrame.origin.y = self.view.frame.size.height;
+        barFrame.origin.y = self.view.bounds.size.height - self.tabBarHeight.floatValue;
+        submenuFrame.origin.y = self.view.bounds.size.height;
     } else {
-        submenuFrame.origin.y = self.view.frame.size.height;
+        submenuFrame.origin.y = self.view.bounds.size.height;
     }
     
     __weak typeof(self) weakself = self;
@@ -144,6 +150,7 @@
         if (finished) {
             [weakself setSubmenuAnimating:NO];
             [weakself setSubmenuVisible:NO];
+            [weakself.submenu setHidden:YES];
             
             for (AHSubitemView *s in weakself.submenu.subviews) {
                 [s removeFromSuperview];
@@ -293,15 +300,18 @@
     
     //Calculate the new dimensions
     float tabwidth = self.tabBar.frame.size.width/self.tabs.count;
-    float tabheight = self.tabBar.frame.size.height;
     
-    UIView *separator = [[UIView alloc] initWithFrame:CGRectMake(0, 0, self.tabBar.frame.size.width, .5f)];
-    [separator setBackgroundColor:[UIColor colorWithWhite:.7f alpha:1.f]];
-    [self.tabBar addSubview:separator];
+    CGRect f = CGRectMake(0, 0, self.tabBar.frame.size.width, .5f);
+    if (![[UIScreen mainScreen] respondsToSelector:@selector(scale)])
+        f.size.height = 1.f;
+    
+    self.separator = [[UIView alloc] initWithFrame:f];
+    [self.separator setBackgroundColor:[UIColor colorWithWhite:.7f alpha:1.f]];
+    [self.tabBar addSubview:self.separator];
     
     //Create and add each tab to the tabBar
     for (int i = 0; i < self.tabs.count; i++) {
-        CGRect tabFrame = CGRectMake(i*tabwidth, 0.f, tabwidth, tabheight);
+        CGRect tabFrame = CGRectMake(i*tabwidth, 0.f, tabwidth, self.tabBarHeight.floatValue);
         AHTabView *tabView = self.tabs[i];
         [tabView setFrame:tabFrame];
         [tabView setSelectedColor:self.selectedColor];
@@ -314,20 +324,102 @@
     }
 }
 
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    CGSize size = [AHTabBarController sizeInOrientation:toInterfaceOrientation];
+    CGRect newDimensions = CGRectMake(0, 0, size.width, size.height);
+    
+    [UIView animateWithDuration:duration animations:^{
+        
+        //Change the separator's frame
+        CGRect sFrame = self.separator.frame;
+        sFrame.size.width = size.width;
+        [self.separator setFrame:sFrame];
+        
+        //Reload the frames
+        if (self.isSubmenuVisible) {
+            AHTabView *t = self.selectedTab;
+            
+            [self.submenu setFrame:CGRectMake(0.f,
+                                              size.height-self.submenu.frame.size.height,
+                                              size.width,
+                                              self.submenu.frame.size.height)];
+            [self.tabBar setFrame:CGRectMake(0.f,
+                                             size.height - self.tabBarHeight.floatValue - self.submenu.frame.size.height,
+                                             size.width,
+                                             self.tabBarHeight.floatValue)];
+            
+            CGRect submenuFrame = self.submenu.frame;
+            submenuFrame.size.height = t.subitems.count*self.subitemHeight.floatValue;
+            [self.submenu setFrame:submenuFrame];
+            
+            CGRect barFrame = self.tabBar.frame;
+            if (self.shouldTabBarAnimate) {
+                barFrame.origin.y = size.height - (t.subitems.count*self.subitemHeight.floatValue + barFrame.size.height);
+                submenuFrame.origin.y = size.height - submenuFrame.size.height;
+            } else {
+                submenuFrame.origin.y = size.height - (submenuFrame.size.height + self.tabBar.frame.size.height);
+            }
+            
+            //Reload the frames for the subitems
+            for (AHSubitemView *s in self.selectedTab.subitems) {
+                int i = (int)[self.selectedTab.subitems indexOfObject:s];
+                [s setSelectedColor:self.selectedColor];
+                CGRect frame = CGRectMake(0.f, i*self.subitemHeight.floatValue, size.width, self.subitemHeight.floatValue);
+                [s setFrame:frame];
+            }
+            
+        } else {
+            [self.tabBar setFrame:CGRectMake(0.f,
+                                             size.height-self.tabBarHeight.floatValue,
+                                             size.width,
+                                             self.tabBarHeight.floatValue)];
+            [self.submenu setFrame:CGRectMake(0.f, size.height, size.width, self.submenu.frame.size.height)];
+            
+        }
+        
+        //Only set the darkenview's frame if it exists, otherwise a dark 'flash' will occur on screen
+        if (_darkenView)
+            [self.darkenView setFrame:newDimensions];
+        
+        [self.containerView setFrame:newDimensions];
+        
+        //Calculate the new dimensions
+        float tabwidth = size.width/self.tabs.count;
+        
+        for (int i = 0; i < self.tabs.count; i++) {
+            AHTabView *t = self.tabs[i];
+            [t setFrame:CGRectMake(i*tabwidth, 0.f, tabwidth, self.tabBarHeight.floatValue)];
+        }
+        
+        [self.submenu layoutIfNeeded];
+        [self.currentItem setSelected:YES];
+    }];
+}
+
++(CGSize)sizeInOrientation:(UIInterfaceOrientation)orientation
+{
+    CGSize size = [UIScreen mainScreen].bounds.size;
+    if ((UIInterfaceOrientationIsLandscape(orientation) && size.width < size.height) ||
+        (UIInterfaceOrientationIsPortrait(orientation) && size.width > size.height)) {
+        size = CGSizeMake(size.height, size.width);
+    }
+    return size;
+}
+
 #pragma mark - Lazy Instantiation
 -(UIView *)tabBar
 {
     if (!_tabBar) {
-        static const float kTabBarHeight = 49.f;
         _tabBar = [[UIView alloc] initWithFrame:CGRectMake(0.f,
-                                                               self.view.frame.size.height-kTabBarHeight,
-                                                               self.view.frame.size.width,
-                                                               kTabBarHeight)];
+                                                               self.view.bounds.size.height-self.tabBarHeight.floatValue,
+                                                               self.view.bounds.size.width,
+                                                               self.tabBarHeight.floatValue)];
         [_tabBar setBackgroundColor:[UIColor colorWithWhite:.9f alpha:.8f]];
         
-        UIView *sep = [[UIView alloc] initWithFrame:CGRectMake(0, 0, _tabBar.frame.size.width, 1.f)];
-        [sep setBackgroundColor:[UIColor colorWithWhite:.7f alpha:1.f]];
-        [_tabBar addSubview:sep];
+        self.separator = [[UIView alloc] initWithFrame:CGRectMake(0, 0, _tabBar.frame.size.width, 1.f)];
+        [self.separator setBackgroundColor:[UIColor colorWithWhite:.7f alpha:1.f]];
+        [_tabBar addSubview:self.separator];
         [self.view addSubview:_tabBar];
     }
     return _tabBar;
@@ -336,7 +428,7 @@
 -(UIView *)containerView
 {
     if (!_containerView) {
-        _containerView = [[UIView alloc] initWithFrame:self.view.frame];
+        _containerView = [[UIView alloc] initWithFrame:self.view.bounds];
         [self.view insertSubview:_containerView belowSubview:self.tabBar];
     }
     return _containerView;
@@ -348,6 +440,14 @@
         _subitemHeight = @50.f;
     }
     return _subitemHeight;
+}
+
+-(NSNumber *)tabBarHeight
+{
+    if (!_tabBarHeight) {
+        _tabBarHeight = @49.f;
+    }
+    return _tabBarHeight;
 }
 
 -(UIColor *)selectedColor
@@ -364,7 +464,7 @@
 -(UIView *)darkenView
 {
     if (!_darkenView) {
-        _darkenView = [[UIView alloc] initWithFrame:self.view.frame];
+        _darkenView = [[UIView alloc] initWithFrame:self.view.bounds];
         [_darkenView setBackgroundColor:[UIColor colorWithWhite:.1f alpha:.5f]];
         [_darkenView setAlpha:0.f];
         [self.view insertSubview:_darkenView aboveSubview:self.containerView];
@@ -417,6 +517,8 @@
 {
     [super viewWillAppear:animated];
     
+    [self.view setTranslatesAutoresizingMaskIntoConstraints:YES];
+    
     [self.view setBackgroundColor:[UIColor blackColor]];
     
     //If the rootViewControllers array hasn't been initialized yet it means that we need to set up the whole tab bar
@@ -451,9 +553,7 @@
     // memory will be freed up.
     for (AHTabView *t in self.tabs) {
         for (AHSubitemView *s in t.subitems) {
-            if (s == self.currentItem)
-                continue;
-            else
+            if (s != self.currentItem)
                 [self setViewController:(UIViewController*)[NSNull null] forSubitem:s];
         }
     }

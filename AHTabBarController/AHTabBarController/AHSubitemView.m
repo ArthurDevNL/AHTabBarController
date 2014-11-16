@@ -18,12 +18,16 @@
 
 @property (nonatomic) UILabel *titleLabel;
 
+@property (nonatomic, getter=isSelected) BOOL selected;
+
 @end
 
 @implementation AHSubitemView
 
 -(void)setSelected:(BOOL)selected
 {
+    _selected = selected;
+    
     if (selected) {
         [self.titleLabel setTextColor:self.selectedColor];
         [self.titleLabel setFont:[UIFont boldSystemFontOfSize:16.f]];
@@ -42,7 +46,7 @@
     [super layoutSubviews];
     
     CGRect frame = self.frame;
-    UIColor *grayColor = [UIColor colorWithWhite:.6f alpha:1.f];
+    UIColor *tintColor = self.isSelected ? self.selectedColor : [UIColor colorWithWhite:.6f alpha:1.f];
     static const float kHorizontalSpacing = 10.f;
     static const float kVerticalSpacing = 5.f;
     
@@ -64,12 +68,12 @@
     tFrame.origin.x = kHorizontalSpacing;
     tFrame.origin.y = (frame.size.height - tFrame.size.height)/2.f;
     [self.thumbnail setFrame:tFrame];
-    [self.thumbnail setImage:[self.image imageWithColor:grayColor]];
+    [self.thumbnail setImage:[self.image imageWithColor:tintColor]];
     
     if (!self.titleLabel) {
         self.titleLabel = [[UILabel alloc] initWithFrame:CGRectZero];
         [self.titleLabel setFont:[UIFont systemFontOfSize:16.f]];
-        [self.titleLabel setTextColor:grayColor];
+        [self.titleLabel setTextColor:tintColor];
         [self.titleLabel setLineBreakMode:NSLineBreakByTruncatingTail];
         [self addSubview:self.titleLabel];
     }
