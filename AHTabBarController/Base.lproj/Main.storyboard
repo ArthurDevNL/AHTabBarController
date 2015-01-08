@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
     </dependencies>
     <scenes>
         <!--Tab Bar Controller-->
@@ -26,8 +26,7 @@
         <!--Purus-->
         <scene sceneID="GuF-GK-Rj0">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uG1-Ee-SuC" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="Tyg-rL-fGC" sceneMemberID="viewController">
+                <viewController id="Tyg-rL-fGC" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="eG1-KE-m3V"/>
                         <viewControllerLayoutGuide type="bottom" id="O5b-sb-Luj"/>
@@ -42,11 +41,32 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6L-SN-4Xh">
+                                <rect key="frame" x="96" y="146" width="128" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="U8Q-Bf-un7"/>
+                                    <constraint firstAttribute="width" constant="128" id="c6S-UV-cla"/>
+                                </constraints>
+                                <state key="normal" title="Show/Hide TabBar">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnHideBarPressed:" destination="Tyg-rL-fGC" eventType="touchUpInside" id="5Wl-q5-XIx"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="B6L-SN-4Xh" secondAttribute="centerX" id="ZaZ-ak-smZ"/>
+                            <constraint firstItem="B6L-SN-4Xh" firstAttribute="top" secondItem="eG1-KE-m3V" secondAttribute="bottom" constant="82" id="eCw-OF-CxP"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Purus" id="1Gp-yC-xCx"/>
+                    <connections>
+                        <outlet property="btnHideBar" destination="B6L-SN-4Xh" id="A9N-F7-30E"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uG1-Ee-SuC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1293" y="-554"/>
         </scene>

@@ -8,11 +8,28 @@
 
 #import "ViewController.h"
 
+#import "AHTabBarController.h"
+#import "AppDelegate.h"
+
 @interface ViewController ()
+
+@property (nonatomic, weak) IBOutlet UIButton *btnHideBar;
+-(IBAction)btnHideBarPressed:(UIButton*)sender;
 
 @end
 
 @implementation ViewController
+
+-(IBAction)btnHideBarPressed:(UIButton *)sender
+{
+    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
+    AHTabBarController *tabBarController = (AHTabBarController*)delegate.window.rootViewController;
+    
+    if (tabBarController.isTabBarHidden)
+        [tabBarController presentTabBar];
+    else
+        [tabBarController hideTabBar];
+}
 
 - (void)viewDidLoad
 {

@@ -48,4 +48,19 @@
  */
 @property (nonatomic) BOOL shouldTabBarAnimate;
 
+/**
+ Indicates whether the tabbar is currently hidden or not
+ */
+@property (nonatomic, readonly, getter=isTabBarHidden) BOOL tabBarHidden;
+
+/**
+ Hides the tab bar (e.g. when something needs to be shown fullscreen).
+ */
+-(void)hideTabBar;
+
+/**
+ Presents the tab bar.
+ */
+-(void)presentTabBar;
+
 @end

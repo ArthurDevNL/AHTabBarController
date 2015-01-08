@@ -78,6 +78,38 @@
 }
 
 #pragma mark - Animations
+-(void)hideTabBar
+{
+    if (self.isTabBarHidden)
+        return;
+    
+    CGRect newFrame = self.tabBar.frame;
+    newFrame.origin.y = self.containerView.frame.size.height;
+    
+    [UIView animateWithDuration:.3f animations:^{
+        [self.tabBar setFrame:newFrame];
+    } completion:^(BOOL finished) {
+        if (finished)
+            _tabBarHidden = YES;
+    }];
+}
+
+-(void)presentTabBar
+{
+    if (!self.isTabBarHidden)
+        return;
+    
+    CGRect newFrame = self.tabBar.frame;
+    newFrame.origin.y = self.containerView.frame.size.height - newFrame.size.height;
+    
+    [UIView animateWithDuration:.2f animations:^{
+        [self.tabBar setFrame:newFrame];
+    } completion:^(BOOL finished) {
+        if (finished)
+            _tabBarHidden = NO;
+    }];
+}
+
 -(void)presentSubmenuForTabView:(AHTabView*)tabView
 {
     if (self.isSubmenuAnimating)
@@ -370,12 +402,17 @@
             }
             
         } else {
-            [self.tabBar setFrame:CGRectMake(0.f,
-                                             size.height-self.tabBarHeight.floatValue,
-                                             size.width,
-                                             self.tabBarHeight.floatValue)];
+            CGRect tabBarFrame = CGRectMake(0.f,
+                                            size.height-self.tabBarHeight.floatValue,
+                                            size.width,
+                                            self.tabBarHeight.floatValue);
+            
             [self.submenu setFrame:CGRectMake(0.f, size.height, size.width, self.submenu.frame.size.height)];
             
+            if (self.isTabBarHidden)
+                tabBarFrame.origin.y = size.height;
+            
+            [self.tabBar setFrame:tabBarFrame];
         }
         
         //Only set the darkenview's frame if it exists, otherwise a dark 'flash' will occur on screen
