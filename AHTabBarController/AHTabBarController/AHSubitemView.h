@@ -42,6 +42,9 @@
  */
 @property (nonatomic) AHTabView *tab;
 
+@property (nonatomic, assign) NSInteger tabIndex;
+@property (nonatomic, assign) NSInteger subIndex;
+
 /**
  Animate to a selected/deselected state.
  */

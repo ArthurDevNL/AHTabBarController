@@ -15,7 +15,7 @@
 		8ECEA95019966F5C006FB7AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECEA94F19966F5C006FB7AA /* main.m */; };
 		8ECEA95419966F5C006FB7AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECEA95319966F5C006FB7AA /* AppDelegate.m */; };
 		8ECEA95719966F5C006FB7AA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8ECEA95519966F5C006FB7AA /* Main.storyboard */; };
-		8ECEA95A19966F5C006FB7AA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECEA95919966F5C006FB7AA /* ViewController.m */; };
+		8ECEA95A19966F5C006FB7AA /* AHExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECEA95919966F5C006FB7AA /* AHExampleViewController.m */; };
 		8ECEA95C19966F5C006FB7AA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8ECEA95B19966F5C006FB7AA /* Images.xcassets */; };
 		8ECEA96319966F5C006FB7AA /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECEA96219966F5C006FB7AA /* XCTest.framework */; };
 		8ECEA96419966F5C006FB7AA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8ECEA94319966F5C006FB7AA /* Foundation.framework */; };
@@ -26,6 +26,9 @@
 		8ECEA98019966FA6006FB7AA /* AHTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECEA97C19966FA6006FB7AA /* AHTabBarController.m */; };
 		8ECEA98119966FA6006FB7AA /* AHTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8ECEA97E19966FA6006FB7AA /* AHTabView.m */; };
 		8EE79C94199671310049F3F3 /* UIImage+Overlay.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EE79C93199671310049F3F3 /* UIImage+Overlay.m */; };
+		D85D4E031CE3A12B00DACB18 /* AHStoryboardExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85D4E021CE3A12B00DACB18 /* AHStoryboardExampleViewController.m */; };
+		D85D4E061CE3A37100DACB18 /* AHExampleListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D85D4E051CE3A37100DACB18 /* AHExampleListViewController.m */; };
+		D85D4E091CE42F6600DACB18 /* AHCodeExampleViewcontroller.m in Sources */ = {isa = PBXBuildFile; fileRef = D85D4E081CE42F6600DACB18 /* AHCodeExampleViewcontroller.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +54,8 @@
 		8ECEA95219966F5C006FB7AA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8ECEA95319966F5C006FB7AA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		8ECEA95619966F5C006FB7AA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		8ECEA95819966F5C006FB7AA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8ECEA95919966F5C006FB7AA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8ECEA95819966F5C006FB7AA /* AHExampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AHExampleViewController.h; sourceTree = "<group>"; };
+		8ECEA95919966F5C006FB7AA /* AHExampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AHExampleViewController.m; sourceTree = "<group>"; };
 		8ECEA95B19966F5C006FB7AA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8ECEA96119966F5C006FB7AA /* AHTabBarControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AHTabBarControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8ECEA96219966F5C006FB7AA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -67,6 +70,12 @@
 		8ECEA97E19966FA6006FB7AA /* AHTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AHTabView.m; path = AHTabBarController/AHTabView.m; sourceTree = "<group>"; };
 		8EE79C92199671310049F3F3 /* UIImage+Overlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIImage+Overlay.h"; path = "AHTabBarController/Category/UIImage+Overlay.h"; sourceTree = "<group>"; };
 		8EE79C93199671310049F3F3 /* UIImage+Overlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImage+Overlay.m"; path = "AHTabBarController/Category/UIImage+Overlay.m"; sourceTree = "<group>"; };
+		D85D4E011CE3A12B00DACB18 /* AHStoryboardExampleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHStoryboardExampleViewController.h; sourceTree = "<group>"; };
+		D85D4E021CE3A12B00DACB18 /* AHStoryboardExampleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHStoryboardExampleViewController.m; sourceTree = "<group>"; };
+		D85D4E041CE3A37100DACB18 /* AHExampleListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHExampleListViewController.h; sourceTree = "<group>"; };
+		D85D4E051CE3A37100DACB18 /* AHExampleListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHExampleListViewController.m; sourceTree = "<group>"; };
+		D85D4E071CE42F6500DACB18 /* AHCodeExampleViewcontroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AHCodeExampleViewcontroller.h; sourceTree = "<group>"; };
+		D85D4E081CE42F6600DACB18 /* AHCodeExampleViewcontroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AHCodeExampleViewcontroller.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +105,8 @@
 		8ECEA93719966F5C006FB7AA = {
 			isa = PBXGroup;
 			children = (
-				8ECEA94919966F5C006FB7AA /* AHTabBarController */,
+				8ECEA94919966F5C006FB7AA /* AHTabBarControllerExample */,
+				8ECEA97819966F7E006FB7AA /* AHTabBarController */,
 				8ECEA96819966F5C006FB7AA /* AHTabBarControllerTests */,
 				8ECEA94219966F5C006FB7AA /* Frameworks */,
 				8ECEA94119966F5C006FB7AA /* Products */,
@@ -123,18 +133,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8ECEA94919966F5C006FB7AA /* AHTabBarController */ = {
+		8ECEA94919966F5C006FB7AA /* AHTabBarControllerExample */ = {
 			isa = PBXGroup;
 			children = (
-				8ECEA97819966F7E006FB7AA /* AHTabBarController */,
 				8ECEA95219966F5C006FB7AA /* AppDelegate.h */,
 				8ECEA95319966F5C006FB7AA /* AppDelegate.m */,
+				D85D4E041CE3A37100DACB18 /* AHExampleListViewController.h */,
+				D85D4E051CE3A37100DACB18 /* AHExampleListViewController.m */,
+				D85D4E011CE3A12B00DACB18 /* AHStoryboardExampleViewController.h */,
+				D85D4E021CE3A12B00DACB18 /* AHStoryboardExampleViewController.m */,
+				D85D4E071CE42F6500DACB18 /* AHCodeExampleViewcontroller.h */,
+				D85D4E081CE42F6600DACB18 /* AHCodeExampleViewcontroller.m */,
+				8ECEA95819966F5C006FB7AA /* AHExampleViewController.h */,
+				8ECEA95919966F5C006FB7AA /* AHExampleViewController.m */,
 				8ECEA95519966F5C006FB7AA /* Main.storyboard */,
-				8ECEA95819966F5C006FB7AA /* ViewController.h */,
-				8ECEA95919966F5C006FB7AA /* ViewController.m */,
 				8ECEA95B19966F5C006FB7AA /* Images.xcassets */,
 				8ECEA94A19966F5C006FB7AA /* Supporting Files */,
 			);
+			name = AHTabBarControllerExample;
 			path = AHTabBarController;
 			sourceTree = "<group>";
 		};
@@ -179,7 +195,7 @@
 				8ECEA97919966FA6006FB7AA /* AHSubitemView.h */,
 				8ECEA97A19966FA6006FB7AA /* AHSubitemView.m */,
 			);
-			name = AHTabBarController;
+			path = AHTabBarController;
 			sourceTree = "<group>";
 		};
 		8EE79C911996711C0049F3F3 /* Category */ = {
@@ -289,13 +305,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D85D4E031CE3A12B00DACB18 /* AHStoryboardExampleViewController.m in Sources */,
 				8ECEA97F19966FA6006FB7AA /* AHSubitemView.m in Sources */,
-				8ECEA95A19966F5C006FB7AA /* ViewController.m in Sources */,
+				8ECEA95A19966F5C006FB7AA /* AHExampleViewController.m in Sources */,
+				D85D4E091CE42F6600DACB18 /* AHCodeExampleViewcontroller.m in Sources */,
 				8ECEA98019966FA6006FB7AA /* AHTabBarController.m in Sources */,
 				8ECEA95419966F5C006FB7AA /* AppDelegate.m in Sources */,
 				8EE79C94199671310049F3F3 /* UIImage+Overlay.m in Sources */,
 				8ECEA98119966FA6006FB7AA /* AHTabView.m in Sources */,
 				8ECEA95019966F5C006FB7AA /* main.m in Sources */,
+				D85D4E061CE3A37100DACB18 /* AHExampleListViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
