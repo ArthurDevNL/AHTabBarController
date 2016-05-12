@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@class AHTabBarController;
+
+@interface AHExampleViewController : UIViewController
+
++(void)setTabController:(AHTabBarController*)tabController;
 
 @end

@@ -6,29 +6,34 @@
 //  Copyright (c) 2014 Arthur Hemmer. All rights reserved.
 //
 
-#import "ViewController.h"
-
+#import "AHExampleViewController.h"
 #import "AHTabBarController.h"
-#import "AppDelegate.h"
 
-@interface ViewController ()
+static AHTabBarController *_tabController;
+
+@interface AHExampleViewController ()
 
 @property (nonatomic, weak) IBOutlet UIButton *btnHideBar;
 -(IBAction)btnHideBarPressed:(UIButton*)sender;
 
 @end
 
-@implementation ViewController
+@implementation AHExampleViewController
+
++(void)setTabController:(AHTabBarController*)tabController {
+    _tabController = tabController;
+}
 
 -(IBAction)btnHideBarPressed:(UIButton *)sender
 {
-    AppDelegate *delegate = [[UIApplication sharedApplication] delegate];
-    AHTabBarController *tabBarController = (AHTabBarController*)delegate.window.rootViewController;
+    if (_tabController == nil) {
+        return;
+    }
     
-    if (tabBarController.isTabBarHidden)
-        [tabBarController presentTabBar];
+    if (_tabController.isTabBarHidden)
+        [_tabController presentTabBar];
     else
-        [tabBarController hideTabBar];
+        [_tabController hideTabBar];
 }
 
 - (void)viewDidLoad

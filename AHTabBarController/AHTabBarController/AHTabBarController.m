@@ -191,13 +191,19 @@
     }];
 }
 
+-(UIViewController*)viewControllerForSubItem:(AHSubitemView*)subItem
+{
+    return [self.storyboard instantiateViewControllerWithIdentifier:
+            subItem.viewControllerIdentifier];
+}
+
 -(void)reloadViewForItem:(AHSubitemView *)subitem
 {
     if (!subitem)
         return;
     
     //Removing the old view(controller)
-    UIViewController *oldController = [self viewControllerForSubitem:self.currentItem];
+    UIViewController *oldController = [self loadedViewControllerForSubitem:self.currentItem];
     if (oldController && ![oldController isEqual:[NSNull null]]) {
         [oldController.view removeFromSuperview];
         [oldController willMoveToParentViewController:nil];
@@ -205,9 +211,12 @@
     }
     
     //Getting the new viewcontroller or create it if we don't have it in memory yet
-    UIViewController *viewController = [self viewControllerForSubitem:subitem];
+    UIViewController *viewController = [self loadedViewControllerForSubitem:subitem];
     if ([viewController isEqual:[NSNull null]] || !viewController) {
-        viewController = [self.storyboard instantiateViewControllerWithIdentifier:subitem.viewControllerIdentifier];
+        subitem.tabIndex = [self.tabs indexOfObject:subitem.tab];
+        subitem.subIndex = [subitem.tab.subitems indexOfObject:subitem];
+        
+        viewController = [self viewControllerForSubItem:subitem];
         
         if (!viewController) {
             [[NSException exceptionWithName:@"Invalid ViewController!"
@@ -294,7 +303,7 @@
 #pragma mark - Utility
 //A method that gets the viewcontroller from the rootViewControllers array for the
 // given subitem. If the viewController does not exist it will return an [NSNull null]
--(UIViewController*)viewControllerForSubitem:(AHSubitemView*)subitem
+-(UIViewController*)loadedViewControllerForSubitem:(AHSubitemView*)subitem
 {
     if (!subitem)
         return nil;
